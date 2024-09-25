@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intento mil uinta-2.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Uinta Construcciones</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="video.mp4.mov" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <header>
+        <div class="logo-container">
+            <a href="intento mil.html"> 
+                <img src="UINTA.png" alt="Logo Uinta Construcciones">
+            </a>
+        </div>
+        <a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
+            <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+        </a>
+        
+        <nav id="navegador">
+    <ul class="menu-items">
+        <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+        <li><a href="proyectos.html">PROYECTOS</a></li>
+        <li><a href="cotizatuproyecto.html">COTIZA TU PROYECTO</a></li>
+    </ul>
+</nav>
+		<a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
+    <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+</a>
+    </header>
+    <main>
+        <h1>SOBRE NOSOTROS</h1>
+        
+        <p>En Uinta Construcciones nos especializamos en la construcción sostenible de alto rendimiento. Trabajamos con materiales innovadores y procesos eficientes que nos permiten realizar proyectos de manera rápida y eficaz.</p>
+        
+        <div class="img-separator">
+            <img src="UINTAblanco.png" alt="Logo Uinta Negro" width="300">
+        </div>
+        <div class="feature-boxes">
+            <div class="box">INNOVACIÓN</div>
+            <div class="box">EFICIENCIA</div>
+            <div class="box">SOSTENIBLE</div>
+        </div>
+        <p>Nuestra misión es proporcionar soluciones constructivas adaptadas a las necesidades de cada cliente, apostando por la eficiencia energética y la sostenibilidad. Contamos con un equipo de profesionales altamente capacitados y comprometidos con la calidad.</p>
+        
+      
+        <div class="image-grid">
+            <div class="image-box">
+                <img src="foto1.jpg" alt="foto 1">
+            </div>
+            <div class="image-box">
+                <img src="foto2.jpg" alt="foto 2">
+            </div>
+            <div class="image-box">
+                <img src="foto3.jpg" alt="foto 3">
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="contact-info">
+            <h2>Información de contacto</h2>
+            <p>CP 7000 Tandil - Buenos Aires</p>
+            <p><a href="mailto:uintaconstrucciones@gmail.com">uintaconstrucciones@gmail.com</a></p>
+            <p>
+                <a href="tel:+542494369099"><img src="wpp.png" alt="Teléfono" width="20" height="20"> 2494369099</a>
+            </p>
+            <p>
+                <a href="https://instagram.com/uintaconstrucciones" target="_blank"><img src="instagram.png" alt="Instagram" width="35">@uintaconstrucciones</a>
+            </p>
+        </div>
+    </footer>
+
+<script>
+        function MiFuncion() {
+            var x = document.getElementById("navegador");
+            var icono = document.querySelector('.lineas');
+            if (x.classList.contains("mostrar")) {
+                x.classList.remove("mostrar");
+                icono.style.display = "block";  
+            } else {
+                x.classList.add("mostrar");
+                icono.style.display = "none";  
+            }
+			$(window).scroll(function(){
+ 
+  if ($(this).scrollTop() > 50) {
+     $('header').addClass('nuevaclase');
+ 
+  } else {
+     $('header').removeClass('nuevaclase');
+  }
+ 
+});
+        }
+</script>
+
+</body>
+</html>

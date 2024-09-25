@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intento mil uinta-2.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Uinta Construcciones</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="video.mp4.mov" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <header>
+        <div class="logo-container">
+            <a href="intento mil.html"> 
+                <img src="UINTA.png" alt="Logo Uinta Construcciones">
+            </a>
+        </div>
+        <a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
+            <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+        </a>
+        
+        <nav id="navegador">
+    <ul class="menu-items">
+        <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+        <li><a href="proyectos.html">PROYECTOS</a></li>
+        <li><a href="cotizatuproyecto.html">COTIZA TU PROYECTO</a></li>
+    </ul>
+</nav>
+		<a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
+    <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+</a>
+    </header>
+<main>
+   
+    <section class="project-quote">
+        <h1>COTIZA TU PROYECTO</h1>
+    </section>
+    <section class="question-section">
+        <div class="question">
+            <p>¿Obra sobre pilotes o platea?</p>
+        </div>
+        <div class="options">
+            <button id="pilotes-btn" class="option-btn" onclick="selectOption('pilotes')">Pilotes</button>
+            <button id="platea-btn" class="option-btn" onclick="selectOption('platea')">Platea</button>
+        </div>
+    </section>
+
+    <section class="walls-and-roof">
+        <!-- Muro externo -->
+        <div class="panel-section">
+            <h2>Muros Externos</h2>
+            <img src="muroexterno.png" alt="Muro Externo">
+            <div class="panel-inputs">
+                <div class="input-group">
+                    <label for="external-width">Ancho (m²):</label>
+                    <input type="number" id="external-width" placeholder="Ancho (m²)">
+                </div>
+                <div class="input-group">
+                    <label for="external-height">Alto (m²):</label>
+                    <input type="number" id="external-height" placeholder="Alto (m²)">
+                </div>
+                <button onclick="addPanel('external')" class="add-button">+</button>
+            </div>
+            <div id="external-panels"></div>
+        </div>
+
+        <div class="panel-section">
+            <h2>Muros Internos</h2>
+            <img src="murointerno.png" alt="Muro Interno">
+            <div class="panel-inputs">
+                <div class="input-group">
+                    <label for="internal-width">Ancho (m²):</label>
+                    <input type="number" id="internal-width" placeholder="Ancho (m²)">
+                </div>
+                <div class="input-group">
+                    <label for="internal-height">Alto (m²):</label>
+                    <input type="number" id="internal-height" placeholder="Alto (m²)">
+                </div>
+                <button onclick="addPanel('internal')" class="add-button">+</button>
+            </div>
+            <div id="internal-panels"></div>
+        </div>
+
+        <div class="panel-section">
+            <h2>Techo</h2>
+            <img src="techo.png" alt="Techo">
+            <div class="panel-inputs">
+                <div class="input-group">
+                    <label for="roof-width">Ancho (m²):</label>
+                    <input type="number" id="roof-width" placeholder="Ancho (m²)">
+                </div>
+                <div class="input-group">
+                    <label for="roof-height">Alto (m²):</label>
+                    <input type="number" id="roof-height" placeholder="Alto (m²)">
+                </div>
+                <button onclick="addPanel('roof')" class="add-button">+</button>
+            </div>
+            <div id="roof-panels"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="contact-info">
+        <h2>Información de contacto</h2>
+        <p>CP 7000 Tandil - Buenos Aires</p>
+        <p><a href="mailto:uintaconstrucciones@gmail.com">uintaconstrucciones@gmail.com</a></p>
+        <p>
+            <a href="tel:+542494369099"><img src="wpp.png" alt="Teléfono" width="20" height="20"> 2494369099</a>
+        </p>
+        <p>
+            <a href="https://instagram.com/uintaconstrucciones" target="_blank"><img src="instagram.png" alt="Instagram" width="35">@uintaconstrucciones</a>
+        </p>
+    </div>
+</footer>
+<script>
+        function MiFuncion() {
+            var x = document.getElementById("navegador");
+            var icono = document.querySelector('.lineas');
+            if (x.classList.contains("mostrar")) {
+                x.classList.remove("mostrar");
+                icono.style.display = "block";  
+            } else {
+                x.classList.add("mostrar");
+                icono.style.display = "none";  
+            }
+			$(window).scroll(function(){
+ 
+  if ($(this).scrollTop() > 50) {
+     $('header').addClass('nuevaclase');
+ 
+  } else {
+     $('header').removeClass('nuevaclase');
+  }
+ 
+});
+        }
+</script>
+</body>
+</html>
