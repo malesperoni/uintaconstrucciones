@@ -102,15 +102,13 @@
         <section class="image-slider">
             <div class="slider">
                 <figure>
-                    <img src="slider.1.jpg" alt="Imagen 1">
-                    <img src="slider.2.jpg" alt="Imagen 2">
-                    <img src="slider.3.jpg" alt="Imagen 3">
-                    <img src="slider.4.jpg" alt="Imagen 4">
-                    <img src="slider.5.jpg" alt="Imagen 5">
-                    <img src="slider.6.jpg" alt="Imagen 6">
+                    <img class="misimagenes" src="slider.1.jpg" alt="Imagen 1">
+                    <img class="misimagenes" src="slider.2.jpg" alt="Imagen 2">
+                    <img class="misimagenes" src="slider.3.jpg" alt="Imagen 3">
+                    <img class="misimagenes" src="slider.4.jpg" alt="Imagen 4">
+                    <img class="misimagenes" src="slider.5.jpg" alt="Imagen 5">
+                    <img class="misimagenes" src="slider.6.jpg" alt="Imagen 6">
                 </figure>
-				 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-       <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </section>
 
@@ -154,32 +152,46 @@
             });
         }
 
-       let slideIndex = 0;
-  
-function showSlide(index) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-    
-    if (index >= totalSlides) {
-        slideIndex = 0;
-    } else if (index < 0) {
-        slideIndex = totalSlides - 1;
-    } else {
-        slideIndex = index;
-    }    
-    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
-}
-function nextSlide() {
-  showSlide(currentSlide + 1);
-}
+      var slideIndex = 1;
+    showDivs(slideIndex);
  
-function prevSlide() {
-  showSlide(currentSlide - 1);
-}  
-function moveSlide(step) {
-    showSlide(slideIndex + step);
-}
-showSlide(slideIndex);
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+ 
+    function showDivs(n) {
+        var i;
+ 
+        // acá define qué elemento entra en el slider
+        var x = document.getElementsByClassName("misimagenes");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+    }
+ 
+    carousel();
+ 
+    function carousel() {
+ 
+    var i;
+ 
+    var x = document.getElementsByClassName("misimagenes");
+ 
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+ 
+    slideIndex++;
+ 
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+ 
+    setTimeout(carousel, 2000); // Cambia la imagen cada 2 segundos
+ 
+    }
     </script>
 </body>
 </html>
