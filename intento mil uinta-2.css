@@ -1,4 +1,133 @@
-main {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-container img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #FFC107;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FFC107;
+    color: #000;
+}
+.lineas {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lineas i {
+    color: #ffc107; 
+    font-size: 2.5em;
+}
+
+.lineas i:hover {
+    color: #fff; 
+}
+
+#background-video {
+    display: none; 
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-image: none; 
+    }
+
+    #background-video {
+        display: block; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #ffcc00;
+    font-family: Arial, sans-serif;
+}
+
+footer .contact-info h2 {
+    color: #ffc300;
+    margin-bottom: 10px;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+}
+
+footer .contact-info a {
+    color: #0099ff;
+    text-decoration: none;
+}
+
+footer .contact-info a img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+footer .contact-info a:hover {
+    text-decoration: underline;
+}main {
     padding: 20px;
     text-align: center;
 }
@@ -131,7 +260,6 @@ header {
     padding: 20px;
     text-align: center;
 }
-
 .logo-container {
     text-align: left;
     margin-bottom: 0px;
@@ -159,7 +287,6 @@ h2 {
 .about-us, .services, .contact {
     margin-bottom: 20px;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -866,6 +993,7 @@ nav ul.menu-items li a:hover {
 }
 
 .icon-container i:hover {
+    background-color: #000;
     color: #ffc107;
 }
 
@@ -902,7 +1030,6 @@ nav ul.menu-items li a:hover {
     }
 
     .lineas {
-		
         display: block;  
         position: absolute;
         right: 20px;
@@ -928,7 +1055,7 @@ nav ul.menu-items li a:hover {
 
 .icon-container, .text-container {
     text-align: center;
-    flex: 1; /* Para que cada ícono ocupe el mismo espacio */
+    flex: 1; 
 }
 
 .text-box p {
@@ -954,8 +1081,8 @@ nav ul.menu-items li a:hover {
         display: block;
         text-align: center;
         padding: 15px;
-        border-radius: 8px;
-        font-size: 2.5em;
+        border-radius: 4px;
+        font-size: 1em;
         color: #fff;
         width: 80%; 
-    }
+    } 
