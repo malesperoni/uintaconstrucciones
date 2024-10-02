@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intento mil uinta-2.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Uinta Construcciones</title>
+    <style>
+        .image-slider {
+            position: relative;
+            width: 90%; 
+            margin: 0 auto; 
+            overflow: hidden;
+        }
+
+        .slider figure {
+            display: flex;
+            margin: 0;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 700px; 
+            object-fit: contain;
+            min-width: 100%;
+        }
+
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        button.prev {
+            left: 10px;
+        }
+
+        button.next {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .image-slider {
+                width: 90%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="video.mp4.mov" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <header>
+        <div class="logo-container">
+            <a href="intento mil.html"> 
+                <img src="UINTA.png" alt="Logo Uinta Construcciones">
+            </a>
+        </div>
+        <a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
+            <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+        </a>
+        
+        <nav id="navegador">
+            <ul class="menu-items">
+                <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+                <li><a href="proyectos.html">PROYECTOS</a></li>
+                <li><a href="cotizatuproyecto.html">COTIZA TU PROYECTO</a></li>
+            </ul>
+        </nav>
+        <a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
+            <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+        </a>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <h2>CONSTRUCCIÓN SOSTENIBLE DE ALTO RENDIMIENTO</h2>
+            <div class="icon-box">
+                <div class="icon-container">
+                    <i class="fa fa-recycle fa-5x" aria-hidden="true"></i>
+                </div>
+                <div class="icon-container">
+                    <i class="fa fa-hourglass fa-5x" aria-hidden="true"></i>
+                </div>
+                <div class="icon-container">
+                    <i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true">&nbsp;&nbsp;</i>
+                </div>
+                <div class="icon-container">
+                    <i class="fa fa-volume-off fa-5x" aria-hidden="true">&nbsp;&nbsp;</i>
+                </div>
+            </div>
+        </section>
+        <section class="image-slider">
+            <div class="slider">
+                <figure>
+                    <img src="slider.1.jpg" alt="Imagen 1">
+                    <img src="slider.2.jpg" alt="Imagen 2">
+                    <img src="slider.3.jpg" alt="Imagen 3">
+                    <img src="slider.4.jpg" alt="Imagen 4">
+                    <img src="slider.5.jpg" alt="Imagen 5">
+                    <img src="slider.6.jpg" alt="Imagen 6">
+                </figure>
+				 <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+       <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="empty-space">
+        </section>
+
+        <section class="contact">
+        </section>
+    </main>
+    
+    <footer>
+        <div class="contact-info">
+            <h2>Información de contacto</h2>
+            <p>CP 7000 Tandil - Buenos Aires</p>
+            <p><a href="mailto:uintaconstrucciones@gmail.com">uintaconstrucciones@gmail.com</a></p>
+            <p><a href="tel:+542494369099"><img src="wpp.png" alt="Teléfono" width="20" height="20"> 2494369099</a></p>
+            <p><a href="https://instagram.com/uintaconstrucciones" target="_blank"><img src="instagram.png" alt="Instagram" width="35">@uintaconstrucciones</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function MiFuncion() {
+            var x = document.getElementById("navegador");
+            var icono = document.querySelector('.lineas');
+            if (x.classList.contains("mostrar")) {
+                x.classList.remove("mostrar");
+                icono.style.display = "block";  
+            } else {
+                x.classList.add("mostrar");
+                icono.style.display = "none";  
+            }
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('header').addClass('nuevaclase');
+                } else {
+                    $('header').removeClass('nuevaclase');
+                }
+            });
+        }
+
+       let slideIndex = 0;
+  
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    
+    if (index >= totalSlides) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = totalSlides - 1;
+    } else {
+        slideIndex = index;
+    }    
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+ 
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}  
+function moveSlide(step) {
+    showSlide(slideIndex + step);
+}
+showSlide(slideIndex);
+    </script>
+</body>
+</html>
