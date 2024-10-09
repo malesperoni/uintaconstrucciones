@@ -496,6 +496,10 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+iframe.anuncio{
+	height: 600px
+}
+
 @media (max-width: 768px) {
     .feature-boxes {
         flex-direction: column;
@@ -1086,3 +1090,16 @@ nav ul.menu-items li a:hover {
         color: #fff;
         width: 80%; 
     } 
+@media (min-width: 768px) {
+  .anuncio {
+    width: 728px;
+  }
+}
+
+@media (max-width: 767px) {
+  .anuncio {
+    width: 300px;
+    height: 600px;
+  }
+}
+
