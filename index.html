@@ -61,7 +61,7 @@
 
     <header>
         <div class="logo-container">
-            <a href="intento mil.html"> 
+            <a href="index.html"> 
                 <img src="UINTA.png" alt="Logo Uinta Construcciones">
             </a>
         </div>
@@ -104,7 +104,6 @@
                 <figure>
                     <img class="misimagenes" src="slider.1.jpg" alt="Imagen 1">
                     <img class="misimagenes" src="slider.2.jpg" alt="Imagen 2">
-                    <img class="misimagenes" src="slider.3.jpg" alt="Imagen 3">
                     <img class="misimagenes" src="slider.4.jpg" alt="Imagen 4">
                     <img class="misimagenes" src="slider.5.jpg" alt="Imagen 5">
                     <img class="misimagenes" src="slider.6.jpg" alt="Imagen 6">
@@ -125,10 +124,11 @@
     <footer>
         <div class="contact-info">
             <h2>Información de contacto</h2>
-            <p>CP 7000 Tandil - Buenos Aires</p>
+            <p><a href="mail.uinta.html">webmail</a></p>
             <p><a href="mailto:uintaconstrucciones@gmail.com">uintaconstrucciones@gmail.com</a></p>
             <p><a href="tel:+542494369099"><img src="wpp.png" alt="Teléfono" width="20" height="20"> 2494369099</a></p>
             <p><a href="https://instagram.com/uintaconstrucciones" target="_blank"><img src="instagram.png" alt="Instagram" width="35">@uintaconstrucciones</a></p>
+			<a href="presentacion.html" class="presentation-button">IR A LA PRESENTACION</a>
         </div>
     </footer>
 
@@ -162,7 +162,6 @@
     function showDivs(n) {
         var i;
  
-        // acá define qué elemento entra en el slider
         var x = document.getElementsByClassName("misimagenes");
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length} ;
@@ -189,7 +188,7 @@
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
  
-    setTimeout(carousel, 2000); // Cambia la imagen cada 2 segundos
+    setTimeout(carousel, 2000); 
  
     }
     </script>
