@@ -1,196 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="intento mil uinta-2.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <title>Uinta Construcciones</title>
-    <style>
-        .image-slider {
-            position: relative;
-            width: 70%; 
-            margin: 0 auto; 
-            overflow: hidden;
-        }
-
-        .slider figure {
-            display: flex;
-            margin: 0;
-            transition: transform 1s ease-in-out;
-        }
-
-        .slider img {
-            width: 100%;
-            height: 700px; 
-            object-fit: contain;
-            min-width: 100%;
-        }
-
-        button.prev, button.next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        button.prev {
-            left: 10px;
-        }
-
-        button.next {
-            right: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .image-slider {
-                width: 90%; 
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malena Speroni</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <video autoplay muted loop id="background-video">
-        <source src="video.mp4.mov" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
-    </video>
 
-    <header>
-        <div class="logo-container">
-            <a href="index.html"> 
-                <img src="UINTA.png" alt="Logo Uinta Construcciones">
-            </a>
-        </div>
-        <a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
-            <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+  <!-- HEADER FIJO -->
+  <header class="header">
+    <div class="logo">Malena Speroni</div>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero">
+
+    <!-- TEXTO -->
+    <div class="hero-text">
+      <h1>
+        I’m Malena, a <span class="underline">multidisciplinary</span><br>
+        designer from Argentina,<br>
+        focused on thoughtful<br>
+        products and visual<br>
+        systems.
+      </h1>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="hero-image">
+      <!-- acá va tu imagen si querés -->
+      <!-- <img src="img/mia.jpg" alt="Foto de Malena"> -->
+    </div>
+
+  </main>
+
+  <!-- WORK / PROJECTS -->
+  <section id="work" class="projects">
+
+    <h2>Projects</h2>
+    <hr>
+
+    <div class="projects-scroll">
+
+      <div class="project">
+        <img src="project1.jpg" alt="Proyecto 1">
+      </div>
+
+      <div class="project">
+        <img src="project2.jpg" alt="Proyecto 2">
+      </div>
+
+      <div class="project">
+        <img src="project3.jpg" alt="Proyecto 3">
+      </div>
+
+      <div class="project">
+        <img src="project4.jpg" alt="Proyecto 4">
+      </div>
+
+      <div class="project">
+        <img src="project5.jpg" alt="Proyecto 5">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="about">
+
+    <h2>About Me</h2>
+    <hr>
+
+    <div class="about-grid">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="about-text">
+        <p>
+          I’m a multidisciplinary designer based in Argentina, currently in my final year
+          of Design in Technology and Business.
+        </p>
+
+        <p>
+          My work spans product, graphic, and digital design, with a strong interest in
+          materiality, visual systems, and user experience. I enjoy working across
+          different scales, from physical products to branding and interfaces.
+        </p>
+
+        <p>
+          I approach design as a thoughtful and iterative process, balancing concept,
+          function, and aesthetics to create meaningful solutions.
+        </p>
+      </div>
+
+      <!-- COLUMNA DERECHA -->
+      <div class="about-accordions">
+
+        <details class="acc">
+          <summary>
+            <span>Language</span>
+            <span class="chev">⌄</span>
+          </summary>
+          <div class="acc-body">
+            <p>Spanish — Native</p>
+            <p>English — Advanced</p>
+            <p>French — Advanced</p>
+            <p>Italian — Basic</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <span>Academic Recognition</span>
+            <span class="chev">⌄</span>
+          </summary>
+          <div class="acc-body">
+            <p>Academic average 9.33</p>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <span>Work Experience</span>
+            <span class="chev">⌄</span>
+          </summary>
+          <div class="acc-body">
+            <p>• (Acá ponés tu experiencia laboral)</p>
+            <p>• Ej: Freelance design projects (2024–present)</p>
+            <p>• Ej: Internship / Part-time (año)</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div>
+
+    <!-- SKILLS MARQUEE -->
+    <div class="skills-marquee" aria-label="Skills">
+      <div class="marquee-track">
+        <span>CSS</span><span>•</span>
+        <span>HTML</span><span>•</span>
+        <span>Figma</span><span>•</span>
+        <span>Fresco</span><span>•</span>
+        <span>Fusion 360</span><span>•</span>
+        <span>KeyShot</span><span>•</span>
+        <span>Adobe Creative Suite</span><span>•</span>
+        <span>PHP</span><span>•</span>
+        <span>JavaScript</span><span>•</span>
+
+        <!-- duplicado para loop continuo -->
+        <span>CSS</span><span>•</span>
+        <span>HTML</span><span>•</span>
+        <span>Figma</span><span>•</span>
+        <span>Fresco</span><span>•</span>
+        <span>Fusion 360</span><span>•</span>
+        <span>KeyShot</span><span>•</span>
+        <span>Adobe Creative Suite</span><span>•</span>
+        <span>PHP</span><span>•</span>
+        <span>JavaScript</span><span>•</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2>Contact</h2>
+    <hr>
+
+    <div class="contact-content">
+      <p class="contact-text">
+        Available for projects, collaborations<br>
+        and conversations.
+      </p>
+
+      <a class="email-btn" href="mailto:malesperoni@gmail.com">
+        Email me
+      </a>
+
+      <p class="contact-note">
+        I usually reply within 24–48 hours.
+      </p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <span>©️ 2026 Malena Speroni | Todos los derechos reservados.</span>
+
+        <a
+          href="https://www.instagram.com/malenasperoni_portfolio?igsh=MWU4bmNyaDZicjE1eg=="
+          target="_blank"
+          aria-label="Instagram"
+          class="instagram"
+        >
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path
+              d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"
+              fill="none"
+              stroke="black"
+              stroke-width="2"
+            />
+            <circle cx="12" cy="12" r="4" fill="none" stroke="black" stroke-width="2"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="black"/>
+          </svg>
         </a>
-        
-        <nav id="navegador">
-            <ul class="menu-items">
-                <li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
-                <li><a href="proyectos.html">PROYECTOS</a></li>
-                <li><a href="cotizatuproyecto.html">COTIZA TU PROYECTO</a></li>
-            </ul>
-        </nav>
-        <a href="javascript:void(0);" onClick="MiFuncion();" class="lineas">
-            <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
-        </a>
-    </header>
-
-    <main>
-        <section class="about-us">
-            <h2>CONSTRUCCIÓN SOSTENIBLE DE ALTO RENDIMIENTO</h2>
-            <div class="icon-box">
-                <div class="icon-container">
-                    <i class="fa fa-recycle fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="icon-container">
-                    <i class="fa fa-hourglass fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="icon-container">
-                    <i class="fa fa-thermometer-three-quarters fa-5x" aria-hidden="true">&nbsp;&nbsp;</i>
-                </div>
-                <div class="icon-container">
-                    <i class="fa fa-volume-off fa-5x" aria-hidden="true">&nbsp;&nbsp;</i>
-                </div>
-            </div>
-        </section>
-        <section class="image-slider">
-            <div class="slider">
-                <figure>
-                    <img class="misimagenes" src="slider.1.jpg" alt="Imagen 1">
-                    <img class="misimagenes" src="slider.2.jpg" alt="Imagen 2">
-                    <img class="misimagenes" src="slider.4.jpg" alt="Imagen 4">
-                    <img class="misimagenes" src="slider.5.jpg" alt="Imagen 5">
-                    <img class="misimagenes" src="slider.6.jpg" alt="Imagen 6">
-                </figure>
-            </div>
-        </section>
-
-        <section class="empty-space">
-        </section>
-		
-<section class="anuncio">
-	<iframe class="anuncio" src="https://santinxo.github.io/anuncio/anuncio.html" width="100%"  name="marco" frameborder="0" scrolling="no"></iframe>
-        </section>
-        <section class="contact">
-        </section>
-    </main>
-    
-    <footer>
-        <div class="contact-info">
-            <h2>Información de contacto</h2>
-            <p><a href="mail.uinta.html">webmail</a></p>
-            <p><a href="mailto:uintaconstrucciones@gmail.com">uintaconstrucciones@gmail.com</a></p>
-            <p><a href="tel:+542494369099"><img src="wpp.png" alt="Teléfono" width="20" height="20"> 2494369099</a></p>
-            <p><a href="https://instagram.com/uintaconstrucciones" target="_blank"><img src="instagram.png" alt="Instagram" width="35">@uintaconstrucciones</a></p>
-			<a href="presentacion.html" class="presentation-button">IR A LA PRESENTACION</a>
-        </div>
+      </div>
     </footer>
 
-    <script>
-        function MiFuncion() {
-            var x = document.getElementById("navegador");
-            var icono = document.querySelector('.lineas');
-            if (x.classList.contains("mostrar")) {
-                x.classList.remove("mostrar");
-                icono.style.display = "block";  
-            } else {
-                x.classList.add("mostrar");
-                icono.style.display = "none";  
-            }
-            $(window).scroll(function() {
-                if ($(this).scrollTop() > 50) {
-                    $('header').addClass('nuevaclase');
-                } else {
-                    $('header').removeClass('nuevaclase');
-                }
-            });
-        }
+  </section>
 
-      var slideIndex = 1;
-    showDivs(slideIndex);
- 
-    function plusDivs(n) {
-    showDivs(slideIndex += n);
-    }
- 
-    function showDivs(n) {
-        var i;
- 
-        var x = document.getElementsByClassName("misimagenes");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex-1].style.display = "block";
-    }
- 
-    carousel();
- 
-    function carousel() {
- 
-    var i;
- 
-    var x = document.getElementsByClassName("misimagenes");
- 
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
- 
-    slideIndex++;
- 
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
- 
-    setTimeout(carousel, 2000); 
- 
-    }
-    </script>
 </body>
 </html>
