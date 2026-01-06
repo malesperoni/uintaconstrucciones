@@ -34,10 +34,13 @@
     </div>
 
     <!-- IMAGEN -->
-    <div class="hero-image">
-      <!-- acá va tu imagen si querés -->
-      <!-- <img src="img/mia.jpg" alt="Foto de Malena"> -->
-    </div>
+<div class="hero-image">
+  <img
+    id="heroPhoto"
+    src="foto1.jpg"
+    alt="Foto de Malena"
+  >
+</div>
 
   </main>
 
@@ -50,24 +53,32 @@
     <div class="projects-scroll">
 
       <div class="project">
-        <img src="project1.jpg" alt="Proyecto 1">
-      </div>
+  <a href="bodysplash.html">
+    <img src="project1.jpg" alt="Body Splash Project">
+  </a>
+</div>
 
       <div class="project">
-        <img src="project2.jpg" alt="Proyecto 2">
-      </div>
-
+  <a href="artchur.html">
+    <img src="project2.jpg" alt="Artchur Project">
+  </a>
+</div>
       <div class="project">
-        <img src="project3.jpg" alt="Proyecto 3">
-      </div>
-
+  <a href="onyx.html">
+    <img src="project3.jpg" alt="ONYX Project">
+  </a>
+</div>
       <div class="project">
-        <img src="project4.jpg" alt="Proyecto 4">
-      </div>
+  <a href="tissu.html">
+    <img src="project4.jpg" alt="Tissu Project">
+  </a>
+</div>
 
-      <div class="project">
-        <img src="project5.jpg" alt="Proyecto 5">
-      </div>
+   <div class="project">
+  <a href="mosaiko.html">
+    <img src="project5.jpg" alt="Mosaiko Project">
+  </a>
+</div>
 
     </div>
 
@@ -109,20 +120,20 @@
             <span class="chev">⌄</span>
           </summary>
           <div class="acc-body">
-            <p>Spanish — Native</p>
-            <p>English — Advanced</p>
-            <p>French — Advanced</p>
-            <p>Italian — Basic</p>
+            <p>• Spanish — Native</p>
+            <p>• English — Advanced</p>
+            <p>• French — Advanced</p>
+            <p>• Italian — Basic</p>
           </div>
         </details>
 
         <details class="acc">
           <summary>
-            <span>Academic Recognition</span>
+            <span>Academic average</span>
             <span class="chev">⌄</span>
           </summary>
           <div class="acc-body">
-            <p>Academic average 9.33</p>
+            <p>•  9.33</p>
           </div>
         </details>
 
@@ -132,9 +143,8 @@
             <span class="chev">⌄</span>
           </summary>
           <div class="acc-body">
-            <p>• (Acá ponés tu experiencia laboral)</p>
-            <p>• Ej: Freelance design projects (2024–present)</p>
-            <p>• Ej: Internship / Part-time (año)</p>
+            <p>• CHER Beauty — Fragrance and Packaging Design(2024–present)</p>
+            <p>• Independent Design Projects (2024–present) </p>
           </div>
         </details>
 
@@ -217,6 +227,24 @@
     </footer>
 
   </section>
+	
+	<script>
+  const photos = [
+    "foto1.jpg",
+    "foto2.jpg",
+    "foto4.jpg",
+    "foto.jpg",
+    "foto3.jpg"
+  ];
+
+  let current = 0;
+  const heroImg = document.getElementById("heroPhoto");
+
+  setInterval(() => {
+    current = (current + 1) % photos.length;
+    heroImg.src = photos[current];
+  }, 2000);
+</script>
 
 </body>
 </html>
