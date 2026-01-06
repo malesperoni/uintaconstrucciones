@@ -531,3 +531,43 @@ body{
   object-fit: cover;
   display: block;
 }
+/* ================================
+   SOLO PROYECTOS (MOBILE):
+   imágenes más grandes + margen ~5mm
+================================ */
+
+/* ~5mm aprox (depende del celu, pero se ve como “mínimo”) */
+@media (max-width: 600px){
+
+  /* margen lateral mínimo en proyectos */
+  .project-detail{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* las secciones de proyecto NO agregan más padding */
+  .project-section{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* TODAS las imágenes de proyectos (hero, full, medium, before/after) */
+  .project-detail img{
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+
+  /* si alguna imagen estaba “chica” por max-width, la liberamos */
+  .image-medium{
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* before/after: también que respete el margen mínimo del proyecto */
+  .before-after{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
